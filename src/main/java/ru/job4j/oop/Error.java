@@ -5,7 +5,7 @@ public class Error {
     private int status;
     private String message;
 
-    public Error(){
+    public Error() {
     }
 
     public Error(boolean active, int status, String message) {
@@ -14,7 +14,7 @@ public class Error {
         this.message = message;
     }
 
-    public void Info() {
+    public void info() {
         System.out.println(active);
         System.out.println(status);
         System.out.println(message);
@@ -25,8 +25,8 @@ public class Error {
         Error error = new Error();
         Error error2 = new Error(true, 2, "Ошибка номер два. Синтаксис");
         Error error3 = new Error(false, 0, "Ошибка ноль. Нет ошибки");
-        error.Info();
-        error2.Info();
-        error3.Info();
+        error.info();
+        error2.info();
+        error3.info();
     }
 }
