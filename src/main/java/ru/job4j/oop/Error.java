@@ -22,10 +22,10 @@ public class Error {
     }
 
     public static void main(String[] args) {
-        Error error1 = new Error();
+        Error error = new Error();
         Error error2 = new Error(true, 2, "Ошибка номер два. Синтаксис");
         Error error3 = new Error(false, 0, "Ошибка ноль. Нет ошибки");
-        error1.Info();
+        error.Info();
         error2.Info();
         error3.Info();
     }
