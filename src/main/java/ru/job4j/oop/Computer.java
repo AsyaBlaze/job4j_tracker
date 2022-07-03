@@ -8,7 +8,7 @@ public class Computer {
 
     public static void main(String[] args) {
         Computer computer = new Computer(true, 500, "Intel Core I7-10700K");
-        //computer.printInfo();
+        computer.printInfo();
         Computer comp = new Computer();
         comp.printInfo();
     }
