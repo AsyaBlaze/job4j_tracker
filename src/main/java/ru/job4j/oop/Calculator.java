@@ -1,7 +1,5 @@
 package ru.job4j.oop;
 
-import java.util.concurrent.Callable;
-
 public class Calculator {
 
     private static int x = 5;
