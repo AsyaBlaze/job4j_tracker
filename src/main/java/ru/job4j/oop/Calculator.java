@@ -33,7 +33,7 @@ public class Calculator {
         int rslDivide = divides.divide(10);
         Calculator sum = new Calculator();
         int rslFinal = sum.sumAllOperation(10);
-        System.out.println(result + " - Сумма\n" + rsl + " - Умножение\n" + rslMinus + " - Вычитание\n" + rslDivide + " - Деление\n" + rslFinal + " - Сумма всех операций\n");
+        System.out.println(result + " - Сумма" + System.lineSeparator() + rsl + " - Умножение" + System.lineSeparator() + rslMinus + " - Вычитание" + System.lineSeparator() + rslDivide + " - Деление" + System.lineSeparator() + rslFinal + " - Сумма всех операций");
     }
 
 }
