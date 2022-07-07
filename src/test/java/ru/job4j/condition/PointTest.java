@@ -6,7 +6,7 @@ import static org.hamcrest.Matchers.closeTo;
 
 public class PointTest {
     @Test
-    public void WhenPoints333And666Then5Point1() {
+    public void whenPoints333And666Then5Point1() {
         Point a = new Point(3, 3, 3);
         Point b = new Point(6, 6, 6);
         double rsl = b.distance3d(a);
@@ -14,7 +14,7 @@ public class PointTest {
     }
 
     @Test
-    public void WhenPoints000And666Then10Point3() {
+    public void whenPoints000And666Then10Point3() {
         Point a = new Point(0, 0, 0);
         Point b = new Point(6, 6, 6);
         double rsl = b.distance3d(a);
