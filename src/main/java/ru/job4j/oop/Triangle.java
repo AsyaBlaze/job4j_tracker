@@ -13,6 +13,7 @@ public class Triangle {
     }
 
     public double semiPerimeter(double a, double b, double c) {
+
         return (a + b + c) / 2;
     }
 
