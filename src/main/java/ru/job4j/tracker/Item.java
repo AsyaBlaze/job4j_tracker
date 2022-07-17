@@ -39,8 +39,6 @@ public class Item {
     }
 
     public void setName(String name) {
-        Item item1 = new Item();
-        Item item2 = new Item("Ms");
-        Item item3 = new Item(9943284, "Narrator");
+        this.name = name;
     }
 }
