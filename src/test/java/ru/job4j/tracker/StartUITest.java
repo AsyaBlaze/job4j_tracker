@@ -24,6 +24,7 @@ public class StartUITest {
                         + "0. Exit Program" + ln
         );
     }
+
     @Test
     public void whenCreateItem() {
         Output out = new StubOutput();
