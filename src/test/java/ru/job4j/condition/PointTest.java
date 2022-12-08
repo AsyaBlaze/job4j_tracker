@@ -4,6 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.closeTo;
 
+@SuppressWarnings("ALL")
 public class PointTest {
     @Test
     public void whenPoints333And666Then5Point1() {
