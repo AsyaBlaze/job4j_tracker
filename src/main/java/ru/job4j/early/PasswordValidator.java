@@ -3,7 +3,6 @@ package ru.job4j.early;
 public class PasswordValidator {
 
     public static String validate(String password) {
-        char[] array = password.toCharArray();
         boolean upperCase = false;
         boolean lowerCase = false;
         boolean number = false;
@@ -14,6 +13,7 @@ public class PasswordValidator {
         if  (password.length() < 8 || password.length() > 32) {
             throw new IllegalArgumentException("Password should be length [8, 32]");
         }
+        char[] array = password.toCharArray();
         for (char x : array) {
             if (Character.isUpperCase(x)) {
                 upperCase = true;
