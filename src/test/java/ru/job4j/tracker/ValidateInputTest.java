@@ -40,6 +40,6 @@ public class ValidateInputTest {
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
         String ln = System.lineSeparator();
-        assertThat(out.toString()).isEqualTo("");
+        assertThat(selected).isEqualTo(-9);
     }
 }
