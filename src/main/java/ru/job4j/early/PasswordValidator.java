@@ -1,5 +1,5 @@
 package ru.job4j.early;
-
+//
 public class PasswordValidator {
 
     public static String validate(String password) {
@@ -28,11 +28,11 @@ public class PasswordValidator {
                 specChar = true;
             }
         }
-        if (password.toLowerCase().contains("user") ||
-                password.toLowerCase().contains("password") ||
-                password.toLowerCase().contains("admin") ||
-                password.toLowerCase().contains("qwerty") ||
-                password.contains("12345")) {
+        if (password.toLowerCase().contains("user")
+                || password.toLowerCase().contains("password")
+                || password.toLowerCase().contains("admin")
+                || password.toLowerCase().contains("qwerty")
+                || password.contains("12345")) {
             throw new IllegalArgumentException("Password shouldn't contain substrings: qwerty, 12345, password, admin, user");
         }
         if (!upperCase) {
@@ -46,13 +46,6 @@ public class PasswordValidator {
         }
         if (!specChar) {
             throw new IllegalArgumentException("Password should contain at least one special symbol");
-        }
-        if (password.toUpperCase().equals("QWERTY")
-                || password.toUpperCase().equals("PASSWORD")
-                || password.toUpperCase().equals("ADMIN")
-                || password.toUpperCase().equals("USER")
-                || password.equals("12345")) {
-            throw new IllegalArgumentException("Password shouldn't contain substrings: qwerty, 12345, password, admin, user");
         }
         return password;
     }
