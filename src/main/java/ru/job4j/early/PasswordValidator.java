@@ -27,14 +27,17 @@ public class PasswordValidator {
             if (!Character.isLetter(x) && !Character.isDigit(x)) {
                 specChar = true;
             }
+            if (upperCase && lowerCase && number && specChar) {
+                break;
+            }
         }
-        if (password.toLowerCase().contains("user")
-                || password.toLowerCase().contains("password")
-                || password.toLowerCase().contains("admin")
-                || password.toLowerCase().contains("qwerty")
-                || password.contains("12345")) {
-            throw new IllegalArgumentException("Password shouldn't contain substrings: qwerty, 12345, password, admin, user");
+        String[] notUnicalPass = {"user", "password", "admin", "qwerty", "12345"};
+        for (int i = 0; i < notUnicalPass.length; i++) {
+            if (password.toLowerCase().contains(notUnicalPass[i])) {
+                throw new IllegalArgumentException("Password shouldn't contain substrings: qwerty, 12345, password, admin, user");
+            }
         }
+
         if (!upperCase) {
             throw new IllegalArgumentException("Password should contain at least one uppercase letter");
         }
