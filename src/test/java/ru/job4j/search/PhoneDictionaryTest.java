@@ -18,7 +18,7 @@ public class PhoneDictionaryTest {
     }
 
     @Test
-    public void whenDontFind() {
+    public void whenDidntFind() {
         PhoneDictionary phones = new PhoneDictionary();
         phones.add(
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
