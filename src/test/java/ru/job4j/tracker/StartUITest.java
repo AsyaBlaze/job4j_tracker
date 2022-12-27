@@ -15,7 +15,7 @@ public class StartUITest {
                 new String[] {"1", "0"}
         );
         Tracker tracker = new Tracker();
-        List <UserAction> actions = new ArrayList<>();
+        List<UserAction> actions = new ArrayList<>();
         actions.add(new ExitAction(out));
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
@@ -35,7 +35,7 @@ public class StartUITest {
                 new String[] {"0", "Item name", "1"}
         );
         Tracker tracker = new Tracker();
-        List <UserAction> actions = new ArrayList<>();
+        List<UserAction> actions = new ArrayList<>();
         actions.add(new CreateAction(out));
         actions.add(new ExitAction(out));
         new StartUI(out).init(in, tracker, actions);
@@ -50,7 +50,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", String.valueOf(item.getId()), "1"}
         );
-        List <UserAction> actions = new ArrayList<>();
+        List<UserAction> actions = new ArrayList<>();
         actions.add(new DeleteAction(out));
         actions.add(new ExitAction(out));
         new StartUI(out).init(in, tracker, actions);
@@ -66,7 +66,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", String.valueOf(item.getId()), replacedName, "1"}
         );
-        List <UserAction> actions = new ArrayList<>();
+        List<UserAction> actions = new ArrayList<>();
         actions.add(new EditAction(out));
         actions.add(new ExitAction(out));
         new StartUI(out).init(in, tracker, actions);
@@ -80,7 +80,7 @@ public class StartUITest {
                 new String[] {"0"}
         );
         Tracker tracker = new Tracker();
-        List <UserAction> actions = new ArrayList<>();
+        List<UserAction> actions = new ArrayList<>();
         actions.add(new ExitAction(out));
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString()).isEqualTo(
@@ -98,7 +98,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", String.valueOf(one.getId()), replaceName, "1"}
         );
-        List <UserAction> actions = new ArrayList<>();
+        List<UserAction> actions = new ArrayList<>();
         actions.add(new EditAction(out));
         actions.add(new ExitAction(out));
         new StartUI(out).init(in, tracker, actions);
@@ -125,7 +125,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", "1"}
         );
-        List <UserAction> actions = new ArrayList<>();
+        List<UserAction> actions = new ArrayList<>();
         actions.add(new ShowItemsAction(out));
         actions.add(new ExitAction(out));
         new StartUI(out).init(in, tracker, actions);
@@ -154,7 +154,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", two.getName(), "1"}
         );
-        List <UserAction> actions = new ArrayList<>();
+        List<UserAction> actions = new ArrayList<>();
         actions.add(new FindByNameAction(out));
         actions.add(new ExitAction(out));
         new StartUI(out).init(in, tracker, actions);
@@ -181,7 +181,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", String.valueOf(two.getId()), "1"}
         );
-        List <UserAction> actions = new ArrayList<>();
+        List<UserAction> actions = new ArrayList<>();
         actions.add(new FindByIdAction(out));
         actions.add(new ExitAction(out));
         new StartUI(out).init(in, tracker, actions);
