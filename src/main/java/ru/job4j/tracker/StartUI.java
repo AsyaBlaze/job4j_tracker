@@ -5,7 +5,7 @@ import java.util.List;
 
 public class StartUI {
     private final Output out;
-    public static List<UserAction> actions = new ArrayList<>();
+
 
     public StartUI(Output out) {
         this.out = out;
@@ -27,13 +27,13 @@ public class StartUI {
 
     private void showMenu(List<UserAction> actions) {
         out.println("Menu:");
-        int i = 0;
-        for (UserAction act : actions) {
-            out.println(i++ + ". " + act.name());
+        for (int index = 0; index < actions.size(); index++) {
+            out.println(index + ". " + actions.get(index).name());
         }
     }
 
     public static void main(String[] args) {
+        List<UserAction> actions = new ArrayList<>();
         Output output = new ConsoleOutput();
         Input input = new ValidateInput(output, new ConsoleInput());
         Tracker tracker = new Tracker();

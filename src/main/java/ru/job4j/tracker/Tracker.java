@@ -1,7 +1,6 @@
 package ru.job4j.tracker;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Tracker {
@@ -16,7 +15,7 @@ public class Tracker {
     }
 
     public List<Item> findAll() {
-        return items;
+        return List.copyOf(items);
     }
 
     public List<Item> findByName(String key) {
@@ -45,7 +44,7 @@ public class Tracker {
         boolean result = index != -1;
         if (result) {
             element.setId(id);
-            items.add(index, element);
+            items.set(index, element);
         }
         return  result;
     }
