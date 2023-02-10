@@ -17,7 +17,7 @@ public class ReconstructPhrase {
     private String getEvenElements() {
         StringBuilder builder = new StringBuilder();
         Iterator iterator = evenElements.iterator();
-        for (int i = 0; iterator.hasNext(); i+=2) {
+        for (int i = 0; iterator.hasNext(); i += 2) {
             builder.append(iterator.next());
             iterator.next();
         }
