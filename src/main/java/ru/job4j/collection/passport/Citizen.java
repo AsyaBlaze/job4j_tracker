@@ -11,12 +11,12 @@ public class Citizen {
         this.username = username;
     }
 
-    public String getPassport() {
-        return passport;
-    }
-
     public String getUsername() {
         return username;
+    }
+
+    public String getPassport() {
+        return passport;
     }
 
     @Override
