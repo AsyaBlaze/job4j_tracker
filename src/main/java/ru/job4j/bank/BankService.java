@@ -1,5 +1,7 @@
 package ru.job4j.bank;
 
+import javassist.NotFoundException;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,16 +15,16 @@ public class BankService {
     }
 
     public boolean deleteUser(String passport) {
-        User user = findByPassport(passport);
-        return users.remove(user) != null;
+        return users.remove(findByPassport(passport)) != null;
     }
 
     public void addAccount(String passport, Account account) {
         User user = findByPassport(passport);
-        List<Account> accounts = users.get(user);
-        if (!accounts.contains(account)) {
-            accounts.add(account);
-            users.replace(user, accounts);
+        if (user != null) {
+            List<Account> accounts = users.get(user);
+            if (!accounts.contains(account)) {
+                accounts.add(account);
+            }
         }
     }
 
@@ -55,18 +57,12 @@ public class BankService {
                                  String destPassport, String destRequisite, double amount) {
         Account srcAccount = findByRequisite(srcPassport, srcRequisite);
         Account destAccount = findByRequisite(destPassport, destRequisite);
-        if (srcAccount == null || destAccount == null) {
+        if ((srcAccount == null || destAccount == null) || (srcAccount.getBalance() < amount)) {
             return false;
         }
-        double srcBalance = srcAccount.getBalance();
-        double destBalance = destAccount.getBalance();
-        boolean rsl = false;
-        if (srcBalance >= amount) {
-            srcAccount.setBalance(srcBalance - amount);
-            destAccount.setBalance(destBalance + amount);
-            rsl = true;
-        }
-        return rsl;
+        srcAccount.setBalance(srcAccount.getBalance() - amount);
+        destAccount.setBalance(destAccount.getBalance() + amount);
+        return true;
     }
 
     public List<Account> getAccounts(User user) {
