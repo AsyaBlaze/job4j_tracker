@@ -36,7 +36,7 @@ public class AnalyzeByMap {
         Map<String, Integer> subjectMap = countScoreBySubject(pupils);
         int size = pupils.get(0).subjects().size();
         for (String subjectName : subjectMap.keySet()) {
-            rsl.add(new Label(subjectName, subjectMap.get(subjectName)/size));
+            rsl.add(new Label(subjectName, subjectMap.get(subjectName) / size));
         }
         return rsl;
     }
