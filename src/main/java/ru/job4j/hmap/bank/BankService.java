@@ -1,6 +1,4 @@
-package ru.job4j.bank;
-
-import javassist.NotFoundException;
+package ru.job4j.hmap.bank;
 
 import java.util.ArrayList;
 import java.util.HashMap;
