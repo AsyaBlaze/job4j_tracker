@@ -1,6 +1,11 @@
 package ru.job4j.tracker;
 
 import org.junit.jupiter.api.Test;
+import ru.job4j.tracker.inputAndOutput.Input;
+import ru.job4j.tracker.inputAndOutput.StubInput;
+import ru.job4j.tracker.inputAndOutput.StubOutput;
+import ru.job4j.tracker.inputAndOutput.ValidateInput;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ValidateInputTest {
