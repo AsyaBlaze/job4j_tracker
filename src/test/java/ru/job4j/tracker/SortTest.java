@@ -6,8 +6,6 @@ import ru.job4j.tracker.sort.ItemDescByName;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
