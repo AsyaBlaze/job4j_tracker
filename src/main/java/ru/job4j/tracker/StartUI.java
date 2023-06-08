@@ -1,10 +1,10 @@
 package ru.job4j.tracker;
 
 import ru.job4j.tracker.actions.*;
-import ru.job4j.tracker.inputAndOutput.ConsoleInput;
-import ru.job4j.tracker.inputAndOutput.ConsoleOutput;
-import ru.job4j.tracker.inputAndOutput.Input;
-import ru.job4j.tracker.inputAndOutput.ValidateInput;
+import ru.job4j.tracker.streams.ConsoleInput;
+import ru.job4j.tracker.streams.ConsoleOutput;
+import ru.job4j.tracker.streams.Input;
+import ru.job4j.tracker.streams.ValidateInput;
 
 import java.util.Arrays;
 import java.util.List;

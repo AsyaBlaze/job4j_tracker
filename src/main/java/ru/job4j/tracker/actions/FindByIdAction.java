@@ -1,7 +1,7 @@
 package ru.job4j.tracker.actions;
 
 import ru.job4j.tracker.*;
-import ru.job4j.tracker.inputAndOutput.Input;
+import ru.job4j.tracker.streams.Input;
 
 public class FindByIdAction implements UserAction {
     private final Output out;

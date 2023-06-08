@@ -1,4 +1,4 @@
-package ru.job4j.tracker.inputAndOutput;
+package ru.job4j.tracker.streams;
 
 public interface Input {
     String askStr(String question);

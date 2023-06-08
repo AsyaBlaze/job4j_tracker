@@ -1,10 +1,10 @@
 package ru.job4j.tracker;
 
 import org.junit.jupiter.api.Test;
-import ru.job4j.tracker.inputAndOutput.Input;
-import ru.job4j.tracker.inputAndOutput.StubInput;
-import ru.job4j.tracker.inputAndOutput.StubOutput;
-import ru.job4j.tracker.inputAndOutput.ValidateInput;
+import ru.job4j.tracker.streams.Input;
+import ru.job4j.tracker.streams.StubInput;
+import ru.job4j.tracker.streams.StubOutput;
+import ru.job4j.tracker.streams.ValidateInput;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

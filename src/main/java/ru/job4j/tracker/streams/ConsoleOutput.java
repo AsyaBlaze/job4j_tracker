@@ -1,4 +1,4 @@
-package ru.job4j.tracker.inputAndOutput;
+package ru.job4j.tracker.streams;
 
 import ru.job4j.tracker.Output;
 
