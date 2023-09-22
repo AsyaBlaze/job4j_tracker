@@ -8,13 +8,8 @@ public class LexSort implements Comparator<String> {
 
     @Override
     public int compare(String left, String right) {
-        Pattern pattern = Pattern.compile("(\\d+)\\. \\w+\\.?");
-        Matcher matcherL = pattern.matcher(left);
-        Matcher matcherR = pattern.matcher(right);
-        matcherL.find();
-        matcherR.find();
-        int leftNum = Integer.parseInt(matcherL.group(1));
-        int rightNum = Integer.parseInt(matcherR.group(1));
+        int leftNum = Integer.parseInt(left.split("\\.")[0]);
+        int rightNum = Integer.parseInt(right.split("\\.")[0]);
         return Integer.compare(leftNum, rightNum);
     }
 }
