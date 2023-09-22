@@ -2,8 +2,19 @@ package ru.job4j.hmap.bank;
 
 import java.util.Objects;
 
+/**
+ * Класс-представление пользователя банка
+ * @author Выборова Анастасия
+ * @version 1.0
+ */
 public class User {
+    /**
+     * Паспорт пользователя
+     */
     private String passport;
+    /**
+     * Ник-нейм пользователя
+     */
     private String username;
 
     public User(String passport, String username) {

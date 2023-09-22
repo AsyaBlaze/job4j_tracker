@@ -2,8 +2,19 @@ package ru.job4j.hmap.bank;
 
 import java.util.Objects;
 
+/**
+ * Класс-представление банковского счета
+ * @author Выборова Анастасия
+ * @version 1.0
+ */
 public class Account {
+    /**
+     * Реквизиты счета
+     */
     private String requisite;
+    /**
+     * Баланс на счету
+     */
     private double balance;
 
     public Account(String requisite, double balance) {
