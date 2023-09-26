@@ -54,28 +54,10 @@ public class AnalyzeByMap {
             for (Subject subject : pupil.subjects()) {
                 score += subject.score();
             }
-            students.add(new Label(pupil.name(), score / pupil.subjects().size()));
+            students.add(new Label(pupil.name(), score));
         }
-        String name = students.get(0).name();
-        double max = students.get(0).score();
-        for (Label student : students) {
-            if (student.score() > max) {
-                max = student.score();
-                name = student.name();
-            }
-        }
-        Pupil pupil = null;
-        for (Pupil pup : pupils) {
-            if (pup.name().equals(name)) {
-                pupil = pup;
-                break;
-            }
-        }
-        double score = 0;
-        for (Subject subject : pupil.subjects()) {
-            score += subject.score();
-        }
-        return new Label(name, score);
+        students.sort(Comparator.naturalOrder());
+        return students.get(students.size() - 1);
     }
 
     public static Label bestSubject(List<Pupil> pupils) {
@@ -92,12 +74,8 @@ public class AnalyzeByMap {
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
                 String subjName = subject.name();
-//                subjectMap.getOrDefault(subject.name(), );
-                if (subjectMap.containsKey(subject.name())) {
-                    subjectMap.replace(subject.name(), subjectMap.get(subject.name()) + subject.score());
-                } else {
-                    subjectMap.put(subjName, subject.score());
-                }
+                int score = subjectMap.getOrDefault(subjName, 0) + subject.score();
+                subjectMap.put(subjName, score);
             }
         }
         return new Label(name, subjectMap.get(name));
