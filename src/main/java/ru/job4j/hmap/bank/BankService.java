@@ -17,7 +17,8 @@ public class BankService {
     private final Map<User, List<Account>> users = new HashMap<>();
 
     /**
-     * @param user добавление пользователя в список банка
+     * Добавление пользователя в список банка
+     * @param user пользователь для добавления
      */
     public void addUser(User user) {
         users.putIfAbsent(user, new ArrayList<Account>());

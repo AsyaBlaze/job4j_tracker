@@ -92,6 +92,7 @@ public class AnalyzeByMap {
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
                 String subjName = subject.name();
+//                subjectMap.getOrDefault(subject.name(), );
                 if (subjectMap.containsKey(subject.name())) {
                     subjectMap.replace(subject.name(), subjectMap.get(subject.name()) + subject.score());
                 } else {
