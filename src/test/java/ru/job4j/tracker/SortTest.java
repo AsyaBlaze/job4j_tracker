@@ -11,7 +11,7 @@ import java.util.List;
 
 public class SortTest {
     @Test
-    public void sortByAsc() {
+    public void whenSortByAsc() {
         List<Item> items = Arrays.asList(
                 new Item("Radio"),
                 new Item("TV"),
@@ -27,7 +27,7 @@ public class SortTest {
     }
 
     @Test
-    public void sortByDsc() {
+    public void whenSortByDsc() {
         List<Item> items = Arrays.asList(
                 new Item("Radio"),
                 new Item("TV"),
