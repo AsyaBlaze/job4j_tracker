@@ -27,7 +27,7 @@ class FunctionCalculatorTest {
     @Test
     void whenDegreeFunction() {
         FunctionCalculator function = new FunctionCalculator();
-        List<Double> result = function.diapason(1, 4, x -> Math.pow(x, x));
+        List<Double> result = function.diapason(1, 4, x -> Math.pow(2, x));
         List<Double> expected = Arrays.asList(1D, 4D, 27D);
         assertThat(result).containsAll(expected);
     }
