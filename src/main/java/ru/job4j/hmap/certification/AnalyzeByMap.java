@@ -32,12 +32,7 @@ public class AnalyzeByMap {
         Map<String, Integer> subjectMap = new HashMap<>();
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
-                String subjName = subject.name();
-                if (subjectMap.containsKey(subject.name())) {
-                    subjectMap.replace(subject.name(), subjectMap.get(subject.name()) + subject.score());
-                } else {
-                    subjectMap.put(subjName, subject.score());
-                }
+                subjectMap.merge(subject.name(), subject.score(), Integer::sum);
             }
         }
         int size = pupils.get(0).subjects().size();
@@ -73,9 +68,7 @@ public class AnalyzeByMap {
         Map<String, Integer> subjectMap = new HashMap<>();
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
-                String subjName = subject.name();
-                int score = subjectMap.getOrDefault(subjName, 0) + subject.score();
-                subjectMap.put(subjName, score);
+                subjectMap.merge(subject.name(), subject.score(), Integer::sum);
             }
         }
         return new Label(name, subjectMap.get(name));
