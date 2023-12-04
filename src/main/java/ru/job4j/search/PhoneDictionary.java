@@ -10,22 +10,12 @@ public class PhoneDictionary {
         this.persons.add(person);
     }
 
-    /*public ArrayList<Person> find(String key) {
-        ArrayList<Person> result = new ArrayList<>();
-        for (Person person : persons) {
-            if (person.getAddress().contains(key) || person.getName().contains(key)
-                    || person.getSurname().contains(key) || person.getPhone().contains(key)) {
-                result.add(person);
-            }
-        }
-        return result;
-    }*/
-
     public ArrayList<Person> find(String key) {
-        Predicate<Person> combine = p -> p.getName().contains(key)
-                || p.getSurname().contains(key)
-                || p.getAddress().contains(key)
-                || p.getPhone().contains(key);
+        Predicate<Person> inName = p -> p.getName().contains(key);
+        Predicate<Person> inSurname = p -> p.getSurname().contains(key);
+        Predicate<Person> inAddress = p -> p.getAddress().contains(key);
+        Predicate<Person> inPhone = p -> p.getPhone().contains(key);
+        Predicate<Person> combine = inName.or(inSurname).or(inAddress).or(inPhone);
         ArrayList<Person> result = new ArrayList<>();
         for (Person person : persons) {
             if (combine.test(person)) {
