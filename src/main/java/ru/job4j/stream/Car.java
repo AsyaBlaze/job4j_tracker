@@ -1,6 +1,7 @@
 package ru.job4j.stream;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Car {
     private String brand;
@@ -84,4 +85,5 @@ public class Car {
                 ", color='" + color + '\'' +
                 '}';
     }
+
 }
