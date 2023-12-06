@@ -11,5 +11,6 @@ public class CardsCreator {
                 .flatMap(suit -> Stream.of(values)
                         .map(value -> new Card(suit, value)))
                 .toList();
+        System.out.println(deck);
     }
 }
