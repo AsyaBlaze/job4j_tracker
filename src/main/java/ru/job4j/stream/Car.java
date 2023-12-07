@@ -1,7 +1,6 @@
 package ru.job4j.stream;
 
 import java.time.LocalDate;
-import java.util.Objects;
 
 public class Car {
     private String brand;
@@ -78,12 +77,20 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", created=" + created +
-                ", volume=" + volume +
-                ", color='" + color + '\'' +
-                '}';
+                "brand='"
+                + brand
+                + '\''
+                + ", model='"
+                + model
+                + '\''
+                + ", created="
+                + created
+                + ", volume="
+                + volume
+                + ", color='"
+                + color
+                + '\''
+                + '}';
     }
 
 }
