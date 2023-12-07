@@ -1,7 +1,6 @@
 package ru.job4j.collection;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 public class Departments {
 
@@ -13,7 +12,6 @@ public class Departments {
                 start.append(start.isEmpty() ? "" : "/");
                 start.append(el);
                 tmp.add(start.toString());
-                /* tmp.add start + "/" + el */
             }
         }
         return new ArrayList<>(tmp);
